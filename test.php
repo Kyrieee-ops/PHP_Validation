@@ -7,6 +7,8 @@ function h($str) {
 //氏名バリデーションクラスを読み込む
 include('class_name_validation.php');
 
+//useの使い方を学ぶ必要あり
+use name\class_name_validation as class_name_validation;
  $class_name_vaidate = new name\class_name_validation();
  //namespace nameのvalidationメソッドに接続
  $result = $class_name_vaidate->validation();
