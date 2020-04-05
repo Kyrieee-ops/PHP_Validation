@@ -6,12 +6,13 @@ function h($str) {
 
 //氏名バリデーションクラスを読み込む
 include('class_name_validation.php');
+$user_name = $_POST['user_name'];
 
 //useの使い方を学ぶ必要あり
-use name\class_name_validation as class_name_validation;
- $class_name_vaidate = new name\class_name_validation();
+use name\class_name_validation;
+ $class_name_vaidate = new class_name_validation();
  //namespace nameのvalidationメソッドに接続
- $result = $class_name_vaidate->validation();
+ $result = $class_name_vaidate->validation($user_name);
 
  /*---------------issetを使用した場合---------------*/
  //issetはNullも空白が入っているものとして判断するため
