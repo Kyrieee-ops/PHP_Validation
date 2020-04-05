@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test_HTML</title>
+</head>
+<body>
+    <!--inputフォームで動作確認-->
+    <!--method="post"の場合-->
+    <!--
+    <form action="test.php" method="POST">
+    -->
+    <!--method="get"の場合-->
+    <form action="test.php" method="POST">
+        <h2>testPHP</h2>
+        <dl>
+            <dt>名前を入力してください</dt>
+            <dd>名前：<input type="text" name="user_name" value=""></dd>
+
+            <!--submitした場合に正常に動作-->
+            <dd><input type="submit" value="type=submitの送信"></dd>
+
+            <!--buttomにした場合の動作-->
+            <dd><input type="button" value="type=buttonの送信"></dd>
+        </dl>
+    </form>
+    
+</body>
+</html>
