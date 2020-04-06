@@ -9,8 +9,8 @@
 
 
 //氏名クラスのバリデーション処理
-namespace name;
-class_name_validation {
+namespace name\name_validation;
+class name_validation {
     public function validation($user_name){
         if (empty($user_name)) {
             $error="名前が入力されていません";

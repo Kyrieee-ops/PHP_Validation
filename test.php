@@ -9,10 +9,11 @@ include('class_name_validation.php');
 $user_name = $_POST['user_name'];
 
 //useの使い方を学ぶ必要あり
-use name\class_name_validation;
- $class_name_vaidate = new class_name_validation();
+//use name\name_validation;
+ $name_vaidate = new name_validation();
  //namespace nameのvalidationメソッドに接続
- $result = $class_name_vaidate->validation($user_name);
+ $name_result = $name_vaidate->validation($user_name);
+ //
 
  /*---------------issetを使用した場合---------------*/
  //issetはNullも空白が入っているものとして判断するため
@@ -55,17 +56,11 @@ use name\class_name_validation;
     <dl>
         <!--エラー変数に値が入っている場合-->
         <!--エラーメッセージを表示する-->
-        <?php if ($error):?>
+        <?php if ($name_result !== ''):?>
         <dt>入力値：</dt>
-        <dd>名前:<?php echo h($error);?></dd>
-
-        <!--入力値がある場合、-->
-        <?php else :?>
-        <dt>送信された値は</dt>
-        <dd>名前:<?php echo h($user_name)."です";?></dd>
-        <?php endif ;?>
+        <dd>名前:<?php echo h($name_result);?></dd>
+        <?php endif ;?>        
     </dl>
-</form>
     
 </body>
 </html>
